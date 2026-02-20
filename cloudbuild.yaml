@@ -2,7 +2,7 @@ steps:
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 
-           'gcr.io/marketplace-deployment-487915/cloud-build-test/hello-world-python:$SHORT_SHA', '.']
+           'europe-west9-docker.pkg.dev/marketplace-deployment-487915/hello-world-python:$SHORT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push',  'europe-west9-docker.pkg.dev/marketplace-deployment-487915/hello-world-python:$SHORT_SHA']
